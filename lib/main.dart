@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:internship_application_4/routes/home_page.dart';
+import 'package:internship_application_4/routes/login_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:internship_application_4/utils/get_routes.dart';
 
@@ -14,7 +14,7 @@ void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     theme: appTheme,
-    initialRoute: AllRoutes.getHomeRoute(),
+    initialRoute: AllRoutes.getLoginRoute(),
     getPages: AllRoutes.routes,
   ));
 }
@@ -24,6 +24,6 @@ class InternshipProject4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomePage();
+    return const LoginPage();
   }
 }
