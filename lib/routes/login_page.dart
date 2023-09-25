@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:internship_application_4/routes/profile_page.dart';
+import 'package:internship_application_4/routes/dashboard_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:internship_application_4/widgets/my_text_field.dart';
 
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       onPressed: () {
-                        Get.to(() => const ProfilePage());
+                        Get.to(() => const DashboardPage());
                       },
                       child: Text(
                         "LOGIN",
