@@ -8,11 +8,12 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ,
+      body: Container(
+        color: const Color.fromRGBO(70, 208, 217, 1),
+      ),
     );
   }
 }
