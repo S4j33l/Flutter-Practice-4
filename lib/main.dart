@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:internship_application_4/utils/get_routes.dart';
-import 'package:internship_application_4/utils/splashy.dart';
+import 'package:internship_application_4/routes/profile_page.dart';
 
 void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: AllRoutes.getSplashScreenRoute(),
     getPages: AllRoutes.routes,
   ));
 }
@@ -16,6 +15,6 @@ class InternshipProject4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Splashy();
+    return const ProfilePage();
   }
 }
