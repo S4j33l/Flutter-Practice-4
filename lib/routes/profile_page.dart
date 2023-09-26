@@ -1,3 +1,4 @@
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
@@ -11,18 +12,37 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  int selectedIndexForBottomNavbar = 0;
   double starRatingValue = 0;
   int numberOfOpinions = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepOrangeAccent,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ,backgroundColor: Colors.purple),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: selectedIndexForBottomNavbar,
+        items: [
+          BottomNavyBarItem(
+            icon: const Icon(Icons.home),
+            title: const Text("Home"),
+          ),
+          BottomNavyBarItem(
+            icon: const Icon(Icons.comment),
+            title: const Text("Comments"),
+          ),
+          BottomNavyBarItem(
+            icon: const Icon(Icons.location_pin),
+            title: const Text("Location"),
+          ),
+          BottomNavyBarItem(
+            icon: const Icon(Icons.settings),
+            title: const Text("Settings"),
+          ),
         ],
+        onItemSelected: (index) {
+          setState(() {
+            selectedIndexForBottomNavbar = index;
+          });
+        },
       ),
       body: Container(
         margin: const EdgeInsets.only(top: 25.0),
