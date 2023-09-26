@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:internship_application_4/routes/dashboard_page.dart';
+import 'package:internship_application_4/routes/profile_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:internship_application_4/widgets/my_text_field.dart';
 
@@ -63,10 +64,15 @@ class _LoginPageState extends State<LoginPage> {
                   physics: const BouncingScrollPhysics(),
                   children: <Widget>[
                     Center(
-                      child: Text(
-                        "Welcome",
-                        style: appTheme.textTheme.titleLarge!
-                            .copyWith(fontWeight: FontWeight.w600),
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.to(() => const ProfilePage());
+                        },
+                        child: Text(
+                          "Welcome",
+                          style: appTheme.textTheme.titleLarge!
+                              .copyWith(fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                     Center(
@@ -121,7 +127,8 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       onPressed: () {
-                        Get.to(() => const DashboardPage(), transition: Transition.leftToRightWithFade);
+                        Get.to(() => const DashboardPage(),
+                            transition: Transition.leftToRightWithFade);
                       },
                       child: Text(
                         "LOGIN",
