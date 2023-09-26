@@ -211,7 +211,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                     const SizedBox(height: 10.0),
                     SizedBox(
-                      height: 500,
+                      height: double.maxFinite,
                       child: ListView(
                         physics: const BouncingScrollPhysics(),
                         children: <Widget>[
@@ -279,7 +279,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                     ),
                                                     const SizedBox(width: 5.0),
                                                     Text(
-                                                      "Timmy Bremer",
+                                                      "Eddie Bremer",
                                                       style: appTheme.textTheme
                                                           .displayMedium!
                                                           .copyWith(
@@ -461,7 +461,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                     ),
                                                     const SizedBox(width: 5.0),
                                                     Text(
-                                                      "Timmy Bremer",
+                                                      "Eddie Bremer",
                                                       style: appTheme.textTheme
                                                           .displayMedium!
                                                           .copyWith(

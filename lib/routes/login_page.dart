@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(() => const ProfilePage());
+                          Get.to(() => const ProfilePage(), transition: Transition.leftToRightWithFade);
                         },
                         child: Text(
                           "Welcome",
