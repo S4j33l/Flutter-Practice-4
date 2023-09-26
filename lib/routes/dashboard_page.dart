@@ -190,7 +190,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Text("Information",
                                     style: appTheme.textTheme.displayMedium),
                                 Text(
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus condimentum nulla diam proin quis commodo malesuada. Dolor morbi egestas consectetur egestas aliquam tellus. Accumsan tristique consequat nec cras commodo et orci ipsum, convallis. Lectus nibh ut eget quis quis praesent pellentesque. Molestie a id potenti vivamus blandit aliquet iaculis sed. Amet ut rutrum mauris gravida pellentesque eget in in potenti.",
                                   style: appTheme.textTheme.displayMedium!
                                       .copyWith(fontSize: 14.0),
                                   softWrap: true,
@@ -258,7 +258,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 "Special House Mix",
                                                 style: appTheme
                                                     .textTheme.titleLarge!
-                                                    .copyWith(fontSize: 24.0),
+                                                    .copyWith(fontSize: 24.0, fontWeight: FontWeight.w900),
                                               ),
                                             ),
                                             const SizedBox(height: 5.0),
@@ -375,7 +375,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 top: 30,
                                 left: 30,
                                 child: Container(
-                                  padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 0, top: 0),
+                                  padding: const EdgeInsets.only(
+                                      left: 10.0,
+                                      right: 10.0,
+                                      bottom: 0,
+                                      top: 0),
                                   decoration: const BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.all(
@@ -557,7 +561,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 top: 30,
                                 left: 30,
                                 child: Container(
-                                  padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 0, top: 0),
+                                  padding: const EdgeInsets.only(
+                                      left: 10.0,
+                                      right: 10.0,
+                                      bottom: 0,
+                                      top: 0),
                                   decoration: const BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.all(

@@ -19,7 +19,7 @@ class _ProfilePageState extends State<ProfilePage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.deepOrangeAccent,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ,backgroundColor: Colors.purple),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         ],
@@ -106,7 +106,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         size: 40.0,
                         color: Color.fromRGBO(240, 241, 245, 1),
                       ),
-                      Text("Home", style: appTheme.textTheme.displayMedium!.copyWith(color: Colors.white, fontWeight: FontWeight.w900)),
+                      Text("Home",
+                          style: appTheme.textTheme.displayMedium!.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900)),
                     ],
                   ),
                 ),
