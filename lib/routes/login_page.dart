@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       onPressed: () {
-                        Get.to(() => const DashboardPage());
+                        Get.to(() => const DashboardPage(), transition: Transition.leftToRightWithFade);
                       },
                       child: Text(
                         "LOGIN",
