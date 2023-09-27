@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_5/routes/dashboard_page.dart';
-import 'package:flutter_application_5/routes/profile_page.dart';
-import 'package:flutter_application_5/theme/application_theme.dart';
-import 'package:flutter_application_5/widgets/my_text_field.dart';
 import 'package:get/get.dart';
+import 'package:internship_application_4/routes/dashboard_page.dart';
+import 'package:internship_application_4/routes/profile_page.dart';
+import 'package:internship_application_4/theme/application_theme.dart';
+import 'package:internship_application_4/widgets/my_text_field.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

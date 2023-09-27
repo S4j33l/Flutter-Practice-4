@@ -1,8 +1,9 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_5/theme/application_theme.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 import 'package:get/get.dart';
+import 'package:internship_application_4/theme/application_theme.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

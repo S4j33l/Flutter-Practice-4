@@ -1,9 +1,8 @@
-import 'package:flutter_application_5/routes/dashboard_page.dart';
-import 'package:flutter_application_5/routes/home_details_page.dart';
-import 'package:flutter_application_5/routes/login_page.dart';
-import 'package:flutter_application_5/routes/profile_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-
+import 'package:internship_application_4/routes/dashboard_page.dart';
+import 'package:internship_application_4/routes/home_details_page.dart';
+import 'package:internship_application_4/routes/login_page.dart';
+import 'package:internship_application_4/routes/profile_page.dart';
 
 class AllRoutes {
   static String profileRoute = "/profilePage";

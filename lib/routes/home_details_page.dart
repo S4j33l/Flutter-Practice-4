@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_5/routes/show_latitude_and_longitude.dart';
-import 'package:flutter_application_5/theme/application_theme.dart';
+
 import 'package:get/get.dart';
+import 'package:internship_application_4/routes/show_latitude_and_longitude.dart';
+import 'package:internship_application_4/theme/application_theme.dart';
 
 class HomeDetailsPage extends StatelessWidget {
   const HomeDetailsPage({super.key});
