@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:internship_application_4/routes/dashboard_page.dart';
-import 'package:internship_application_4/routes/home_details_page.dart';
 import 'package:internship_application_4/routes/profile_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:internship_application_4/widgets/my_text_field.dart';
@@ -29,12 +28,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  GestureDetector(
-                      onTap: () {
-                        Get.to(() => const HomeDetailsPage(),
-                            transition: Transition.leftToRightWithFade);
-                      },
-                      child: Image.asset("assets/images/home_search.png")),
+                  Image.asset("assets/images/home_search.png"),
                   RichText(
                     text: const TextSpan(
                       style: TextStyle(fontSize: 40.0, fontFamily: "Rubik"),

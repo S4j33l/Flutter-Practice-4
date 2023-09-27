@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 
 class HomeDetailsPage extends StatelessWidget {
@@ -228,7 +229,9 @@ class HomeDetailsPage extends StatelessWidget {
                       shape: const CircleBorder(),
                       padding: const EdgeInsets.all(10.0),
                       elevation: 0.0),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   child: const Icon(Icons.arrow_back_ios_new_outlined,
                       color: Colors.black),
                 ),
