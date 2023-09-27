@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/routes/home_details_page.dart';
+import 'package:flutter_application_5/theme/application_theme.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:internship_application_4/routes/home_details_page.dart';
-import 'package:internship_application_4/theme/application_theme.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/routes/show_latitude_and_longitude.dart';
+import 'package:flutter_application_5/theme/application_theme.dart';
 import 'package:get/get.dart';
-import 'package:internship_application_4/theme/application_theme.dart';
 
 class HomeDetailsPage extends StatelessWidget {
   const HomeDetailsPage({super.key});
@@ -84,10 +85,15 @@ class HomeDetailsPage extends StatelessWidget {
                     const SizedBox(width: 5.0),
                     const Icon(Icons.control_point),
                     const SizedBox(width: 5.0),
-                    Text(
-                      "Safe location",
-                      style: appTheme.textTheme.displayMedium!
-                          .copyWith(fontSize: 12.0),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(() => const LatitudeLongitudePage());
+                      },
+                      child: Text(
+                        "Safe location",
+                        style: appTheme.textTheme.displayMedium!
+                            .copyWith(fontSize: 12.0),
+                      ),
                     ),
                     const SizedBox(width: 5.0),
                     const Icon(Icons.control_point),
