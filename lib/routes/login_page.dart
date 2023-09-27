@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String? error;
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override

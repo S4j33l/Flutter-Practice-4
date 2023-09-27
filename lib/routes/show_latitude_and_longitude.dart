@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -74,7 +76,23 @@ class _LatitudeLongitudePageState extends State<LatitudeLongitudePage> {
                       .copyWith(fontWeight: FontWeight.w900, fontSize: 14.0),
                 ),
               ),
-            )
+            ),
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                    padding: const EdgeInsets.all(10.0),
+                    elevation: 0.0),
+                onPressed: () {
+                  Get.back();
+                },
+                child: Text(
+                  "Go back",
+                  style: appTheme.textTheme.displayMedium!
+                      .copyWith(fontWeight: FontWeight.w900, fontSize: 14.0),
+                ),
+              ),
+            ),
           ],
         ),
       ),

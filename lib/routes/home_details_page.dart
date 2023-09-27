@@ -88,7 +88,7 @@ class HomeDetailsPage extends StatelessWidget {
                     const SizedBox(width: 5.0),
                     GestureDetector(
                       onTap: () {
-                        Get.to(() => const LatitudeLongitudePage());
+                        Get.to(() => const LatitudeLongitudePage(), transition: Transition.leftToRightWithFade);
                       },
                       child: Text(
                         "Safe location",
