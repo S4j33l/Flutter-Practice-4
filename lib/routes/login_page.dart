@@ -1,6 +1,7 @@
+import 'package:art_sweetalert/art_sweetalert.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:internship_application_4/routes/dashboard_page.dart';
 import 'package:internship_application_4/routes/profile_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 import 'package:internship_application_4/widgets/my_text_field.dart';
@@ -13,7 +14,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String? error;
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override
@@ -65,16 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                   physics: const BouncingScrollPhysics(),
                   children: <Widget>[
                     Center(
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.to(() => const ProfilePage(),
-                              transition: Transition.leftToRightWithFade);
-                        },
-                        child: Text(
-                          "Welcome",
-                          style: appTheme.textTheme.titleLarge!
-                              .copyWith(fontWeight: FontWeight.w600),
-                        ),
+                      child: Text(
+                        "Welcome",
+                        style: appTheme.textTheme.titleLarge!
+                            .copyWith(fontWeight: FontWeight.w600),
                       ),
                     ),
                     Center(
@@ -129,8 +123,10 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       onPressed: () {
-                        Get.to(() => const DashboardPage(),
-                            transition: Transition.leftToRightWithFade);
+                        signIn(
+                          emailController.text.trim(),
+                          passwordController.text.trim(),
+                        );
                       },
                       child: Text(
                         "LOGIN",
@@ -164,5 +160,30 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  Future<void> signIn(String email, String password) async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      Get.to(
+        () => const ProfilePage(),
+        transition: Transition.leftToRightWithFade,
+      );
+    } on FirebaseAuthException catch (e) {
+      if (context.mounted) {
+        ArtSweetAlert.show(
+          context: context,
+          artDialogArgs: ArtDialogArgs(
+              type: ArtSweetAlertType.danger,
+              title: "Could not login",
+              confirmButtonColor: const Color.fromRGBO(19, 73, 123, 1),
+              text: "Your login credentials were invalid"),
+        );
+      }
+      print(e.message);
+    }
   }
 }

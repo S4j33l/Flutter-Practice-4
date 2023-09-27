@@ -1,8 +1,10 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:get/get.dart';
+import 'package:internship_application_4/routes/dashboard_page.dart';
 import 'package:internship_application_4/theme/application_theme.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -71,7 +73,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     style: appTheme.textTheme.displayMedium!
                         .copyWith(fontSize: 14.0)),
                 const SizedBox(width: 4.0),
-                const Icon(Icons.arrow_downward),
+                GestureDetector(
+                    onTap: () {
+                      FirebaseAuth.instance.signOut();
+                      Get.back();
+                    },
+                    child: const Icon(
+                      Icons.arrow_downward,
+                    )),
                 const SizedBox(width: 40.0),
                 const Icon(Icons.notification_add),
                 const SizedBox(width: 20.0),
@@ -109,29 +118,37 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 20.0),
             Row(
               children: <Widget>[
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Color.fromRGBO(69, 207, 214, 1),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20.0),
-                    ),
-                  ),
-                  height: 150,
-                  width: 110,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      const SizedBox(height: 10.0),
-                      const Icon(
-                        Icons.home,
-                        size: 40.0,
-                        color: Color.fromRGBO(240, 241, 245, 1),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(
+                      () => const DashboardPage(),
+                      transition: Transition.leftToRightWithFade,
+                    );
+                  },
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(69, 207, 214, 1),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20.0),
                       ),
-                      Text("Home",
-                          style: appTheme.textTheme.displayMedium!.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900)),
-                    ],
+                    ),
+                    height: 150,
+                    width: 110,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        const SizedBox(height: 10.0),
+                        const Icon(
+                          Icons.home,
+                          size: 40.0,
+                          color: Color.fromRGBO(240, 241, 245, 1),
+                        ),
+                        Text("Home",
+                            style: appTheme.textTheme.displayMedium!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900)),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(width: 10.0),
