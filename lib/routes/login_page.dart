@@ -195,7 +195,7 @@ class _LoginPageState extends State<LoginPage> {
               text: "Your login credentials were invalid"),
         );
       }
-      print(e.message);
+      debugPrint(e.message);
     }
   }
 }
