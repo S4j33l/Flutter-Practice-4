@@ -164,16 +164,26 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> signIn(String email, String password) async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return const Center(child: CircularProgressIndicator());
+          },
+        );
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+      }
+        Navigator.of(context).pop();
       Get.to(
         () => const ProfilePage(),
         transition: Transition.leftToRightWithFade,
       );
     } on FirebaseAuthException catch (e) {
       if (context.mounted) {
+        Navigator.of(context).pop();
         ArtSweetAlert.show(
           context: context,
           artDialogArgs: ArtDialogArgs(
