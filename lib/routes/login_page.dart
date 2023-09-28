@@ -176,7 +176,9 @@ class _LoginPageState extends State<LoginPage> {
           password: password,
         );
       }
+      if (context.mounted) {
         Navigator.of(context).pop();
+      }
       Get.to(
         () => const ProfilePage(),
         transition: Transition.leftToRightWithFade,
