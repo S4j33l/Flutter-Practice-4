@@ -40,7 +40,7 @@ class _LatitudeLongitudePageState extends State<LatitudeLongitudePage> {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: const Color.fromRGBO(70, 208, 217, 1),
                     padding: const EdgeInsets.all(10.0),
                     elevation: 0.0),
                 onPressed: () {
@@ -64,7 +64,7 @@ class _LatitudeLongitudePageState extends State<LatitudeLongitudePage> {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: const Color.fromRGBO(70, 208, 217, 1),
                     padding: const EdgeInsets.all(10.0),
                     elevation: 0.0),
                 onPressed: () {
@@ -80,7 +80,7 @@ class _LatitudeLongitudePageState extends State<LatitudeLongitudePage> {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: const Color.fromRGBO(70, 208, 217, 1),
                     padding: const EdgeInsets.all(10.0),
                     elevation: 0.0),
                 onPressed: () {
