@@ -1,3 +1,2 @@
-# internship_application_4
-
-Replicating a Figma design <br>
+Doing random shi at the internship #4 <br>
+Replicating a Figma design 
